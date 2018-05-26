@@ -32,7 +32,7 @@ repositories {
 
 dependencies {
     compile(kotlin("stdlib-jdk8", kotlinVersion))
-    compile("org.jetbrains.kotlinx:kotlinx-html:0.6.10")
+    compile("org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.10")
     testCompile("junit", "junit", "4.12")
 }
 
