@@ -1,8 +1,9 @@
+import com.bulwinkel.gitversion.GitVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     var kotlinVersion: String by extra
-    kotlinVersion = "1.2.41"
+    kotlinVersion = "1.2.50"
 
     repositories {
         mavenCentral()
@@ -14,10 +15,13 @@ buildscript {
 
 plugins {
     java
+    id ("com.bulwinkel.gradle.git-version") version ("0.2.0")
 }
 
+val gitVersion: GitVersion by extra
+
 group = "com.knkengravings"
-version = "1.0-SNAPSHOT"
+version = gitVersion.name
 
 apply {
     plugin("kotlin")
